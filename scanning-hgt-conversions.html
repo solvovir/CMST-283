@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Height Conversion</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h2>Height Conversion</h2>
+  <label for="feet">Feet:</label>
+  <input type="number" name="feet" id="feet" min="0" value="5" onclick="reset()"><br><br>
+  <label for="inches">Inches:</label>
+  <input type="number" name="inches" id="inches" min="0" value="9" onclick="reset()"><br><br>
+  <button onclick="display()">Convert to Decimal</button><br><br>
+  <label for="totalFeet">Total Feet in decimals:</label>
+  <input type="number" name="totalFeet" id="totalFeet" min="0" readonly><br><br>
+  <label for="totalInches">Total Inches:</label>
+  <input type="number" name="totalInches" id="totalInches" min="0" readonly><br><br>
+  
+  <script>
+    "use strict";
+    function display() {
+      // access the HTML input and output elements
+      var feetElement = document.getElementById("feet");      
+      var inchesElement = document.getElementById("inches");
+      // input feet and convert 
+      var feet = parseFloat(feetElement.value);
+	  var inches = parseFloat(inchesElement.value);
+      // calculate feet to inches at 1 foot = 12 inches then add feet
+      var totinches = (12 * feet) + inches ;
+	  //calculate inches to feet at 12 inches = 1 foot then add any remaining inches
+	  var totfeet = (inches / 12) + feet ; 
+      // format the output string
+      var outInches = totinches.toFixed(3);
+	  var outFeet = totfeet.toFixed(3); 
+      // display result in the output element
+      var totalFeetElement = document.getElementById("totalFeet");
+	  totalFeetElement.value = outFeet; 
+	  var totalInchesElement = document.getElementById("totalInches");
+	  totalInchesElement.value = outInches;
+    }
+    function reset() {
+      document.getElementById("totalFeet").value = "";
+	  document.getElementById("totalInches").value = "";
+    }
+  </script>
+  
+</body>
+</html> 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Distance from Time</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h2>Distance from Time</h2>
+  <label for="seconds">Enter number of seconds:</label>
+  <input type="number" name="seconds" id="seconds" min="0" value="10"><br><br>
+  <button onclick="display()">Calculate Distance</button><br>
+  <p id="output"></p>
+<script>
+"use script";
+function display () {
+// internal data
+var g = 9.80665; //gravity
+//access HTML input element
+var secondsElement = document.getElementById("seconds"); 
+//input seconds and convert
+var seconds = parseFloat(secondsElement.value);
+//calculate distance
+var hgt = (g * seconds **2) / 2; 
+hgt *= 3.28084; 
+//format output string
+var out = "It takes a ball " + seconds + "secs. to drop " + hgt.toFixed(3)
+//copy output to output element
+document.getElementById("output").innerHTML = out; 
+
+}
+
+</script>
+</body>
+</html> 

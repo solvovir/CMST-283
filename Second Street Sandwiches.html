@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sandwich Orders</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1em;
+    }
+    #container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 0px;
+      background-color: lightgray;
+    }
+
+    label {
+      <!-- display: inline-block; /* so width is recognized */ -->
+      <!-- width: 50px;           /* so can right align */ -->
+      <!-- text-align: right; -->
+      <!-- padding-right: 0px; -->
+      <!-- font-weight: bold;    -->
+    }
+    label, input, button { 
+      margin: 10px 5px;  /* 10 top/bottom, 2 left/right */
+    }
+    #extras input {
+      margin-left: 0px;  /* to left align with name, qty */
+    }
+    #extras label {
+      display: inline;  /* remove width restriction*/
+    }
+    button {
+      font-size: 1.0em;
+      height: 2em;
+      width: 150px;
+      padding: .25em;
+      margin-left: 110px;
+      border: 2px solid darkgreen;
+      background-color: palegreen;
+      color: darkgreen;  /* text */
+    }
+    button:hover {  /* swap text & background */
+      background-color: darkgreen;
+      color: palegreen;
+    }
+	legend {
+	background-color: darkgray; 
+	color: navy; 
+	font-family: "Old English"; 
+	}
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>Second Street Sandwiches</h2>
+    <p>order your customized sandwich online for pickup or delivery.</p>
+    <form method="post" action="https://webdevbasics.net/scripts/demo.php" target="_blank">
+	<div>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required><br>
+	  <label for="tel">Phone:</label> 
+      <input type="tel" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="type in your 10 digit phone number in a xxx-xxx-xxxx format" 
+	  placeholder="888-123-1234" required><br>
+      <label for="qty">Quantity:</label>
+      <input type="number" name="qty" id="qty" min="1" max="10" value="1" required><br>
+     
+	 <fieldset id="bread">
+	 <legend>Select Bread</legend>
+	  
+  <input type="radio" id="sourdough" name="bread" value="sourdough">
+  <label for="sourdough">Sourdough</label><br>
+  <input type="radio" id="wheat" name="bread" value="wheat">
+  <label for="wheat">Wheat</label><br>
+  <input type="radio" id="rye" name="bread" value="rye">
+  <label for="rye">Rye</label>
+	    </fieldset>
+	  <fieldset id="base">
+	  <legend>Select your Base</legend>
+	  <select id="base" name="base" required>
+    <option value="ham">Virginia Sugar Cured Ham</option>
+    <option value="turkey">Honey Roasted Turkey</option>
+    <option value="roast beef">Roast Prime Rib of Beef</option>
+    <option value="avocado">Avocado Slices</option>
+  </select>
+	  </fieldset>
+	  <fieldset id="cheese">
+	  <legend>Select your Cheese</legend>
+	  <select id="cheese" name="cheese" required>
+    <option value="no">No Cheese</option>
+    <option value="cheddar">Sharp Cheddar</option>
+    <option value="swiss">Baby Swiss</option>
+    <option value="jack">Jalapeno Jack</option>
+  </select>
+	  </fieldset>
+	  <fieldset id="extras">
+	  <legend>Select Toppings</legend>
+        <input type="checkbox" name="lettuce" id="lettuce" value="Yes">
+        <label for="lettuce">Lettuce</label>
+        <input type="checkbox" name="tomato" id="tomato"  value="Yes">
+        <label for="tomato">Tomato</label>
+		 <input type="checkbox" name="mustard" id="mustard"  value="Yes">
+        <label for="mustard">Spicy Brown Mustard</label>
+		 <input type="checkbox" name="mayo" id="mayo"  value="Yes">
+        <label for="mayo">Mayonnaise</label>
+		 <input type="checkbox" name="radish" id="radish"  value="Yes">
+        <label for="radish">Horseradish</label>
+      </fieldset>
+      <input type="submit" onclick="display()" value="Add to Order">
+
+	</form>
+	  </div>
+    <p id="output"></p>  
+  </div>
+  
+  <script>
+  "use strict"; 
+  function display () {
+ 
+  
+  }
+  
+  function reset () {
+  document.getElementById("output").innerHTML = " ";
+ 
+  }
+  
+  
+  </script>
+  
+  
+  
+  
+  
+</body>
+</html> 

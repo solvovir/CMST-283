@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Old MacDonald's Farm</title>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <h2>Old MacDonald's Farm</h2>
+  <label for="animal">Enter an animal:</label>
+  <input type="text" name="animal" id="animal"><br><br>
+  <label for="noise">Enter the animal's noise:</label>
+  <input type="text" name="noise" id="noise"><br><br> 
+  <button onclick="display()">Print Old MacDonald</button><br><br>
+  <p id="output"></p>
+  
+   <script>
+    "use strict";
+    function display() {
+      // access the HTML input and output elements
+      var animalElement = document.getElementById("animal");
+	  var noiseElement = document.getElementById("noise");
+      var outputElement = document.getElementById("output");
+      // input the animal
+      var animal = animalElement.value;
+      // use the animal to generate the song
+	  
+	    // input the animal noise
+      var noise = noiseElement.value;
+      // use the animal to generate the song
+	  
+      var out = generateSong(animal, noise);
+      // copy the song to the output element
+      outputElement.innerHTML = out;
+	  
+	  
+    }
+    function generateSong(animal, noise) {
+      var out  = "Old Macdonald had a farm<br>";
+      out += "E I E I O<br>";
+      out += "and on this farm he had a " + animal + "<br>";
+      out += "E I E I O<br>";
+      out += "with a "  + noise + noise + " here <br>";
+      out += "and a " + noise + noise + " there <br>";
+      out += "E I E I O<br>";
+      return out;
+    }
+	
+	//function generateSong(noise) {
+   //   var out  = "with a " + noise + noise + "here <br>";
+   //   out += "and a " + noise + noise + "there <br>";
+   //   out += "E I E I O<br>";
+   //   return out;
+ //   }
+	
+  </script>
+  
+</body>
+</html> 
