@@ -1,8 +1,4 @@
-# Associates of Web Development portfolio
-CMST 283
-CMST 180
-CMST 283
 DIGME 137
-CMST 247
-CMST 250
-
+Professor Oetken
+DIGME 137 class was primarly working with digital design elements mostly in photoshop. Our instructor did provide some video tutorials with illustrator, but O had more familiarity with Photoshop and decided to stick with it. I also studied the basics of composition concepts. I typically enjoy digital design more than coding. I am not a very strong coder in general, but working with digital design software tends to come to me easier. The 4 things to remember with creating a composition: SPACE, COLOR, TEXTURE, SHAPE
+Since finishing this class, I have gained more experience working with Photoshop and Lightrooom. I added a stylus to my surface pro. I leared to work better with layers, gained a better understanding of the different select tools in Photoshop, and color mapping adjustment in both photoshop and light room. 
